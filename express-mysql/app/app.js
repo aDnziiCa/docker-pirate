@@ -12,7 +12,7 @@ app.use(express.json()); // Parse JSON bodies (legacy was body-parser)
 app.use(router); // Expand routes functionalities with custom router
 
 app.get("/", (req, res) => {
-  res.status(200).json({ message: "Hello, Ya compile jejejejeje." });
+  res.status(200).json({ message: "Hello, Pruebas lista." });
 });
 
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
