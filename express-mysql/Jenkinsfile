@@ -73,6 +73,7 @@ pipeline {
                           -Dsonar.tests=./${PROJECT_ROOT}/test \
                           -Dsonar.javascript.lcov.reportPaths=./${PROJECT_ROOT}/coverage/lcov.info"
             }
+            sleep(20)
             timeout(time: 30, unit: 'MINUTES') {
               // In case of SonarQube failure or direct timeout exceed, stop Pipeline
               waitForQualityGate abortPipeline: qualityGateValidation(waitForQualityGate())
